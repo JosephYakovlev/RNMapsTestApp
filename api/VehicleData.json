@@ -1,0 +1,159 @@
+[
+  {
+    "id": 1,
+    "category": "Грузовой",
+    "licensePlateNumber": "M313EC777",
+    "geoLocation": {
+      "latitude": 44.4616,
+      "longitude": 34.0659
+    },
+    "driverName": "Иван",
+    "driverSurname": "Петров",
+    "driverPhoneNumber": "79788092673"
+  },
+  {
+    "id": 2,
+    "category": "Пассажирский",
+    "licensePlateNumber": "B212OP777",
+    "geoLocation": {
+      "latitude": 44.4957,
+      "longitude": 34.1664
+    },
+    "driverName": "Алексей",
+    "driverSurname": "Иванов",
+    "driverPhoneNumber": "79788092674"
+  },
+  {
+    "id": 3,
+    "category": "Спецтранспорт",
+    "licensePlateNumber": "M815TM82",
+    "geoLocation": {
+      "latitude": 44.6100,
+      "longitude": 34.355
+    },
+    "driverName": "Андрей",
+    "driverSurname": "Смирнов",
+    "driverPhoneNumber": "79788092675"
+  },
+  {
+    "id": 4,
+    "category": "Грузовой",
+    "licensePlateNumber": "E777KX123",
+    "geoLocation": {
+      "latitude": 44.9480,
+      "longitude": 34.1000
+    },
+    "driverName": "Дмитрий",
+    "driverSurname": "Сидоров",
+    "driverPhoneNumber": "79788092676"
+  },
+  {
+    "id": 5,
+    "category": "Пассажирский",
+    "licensePlateNumber": "B123OP123",
+    "geoLocation": {
+      "latitude": 44.9480,
+      "longitude": 34.1000
+    },
+    "driverName": "Анатолий",
+    "driverSurname": "Кузнецов",
+    "driverPhoneNumber": "79788092677"
+  },
+  {
+    "id": 6,
+    "category": "Спецтранспорт",
+    "licensePlateNumber": "A456BC82",
+    "geoLocation": {
+      "latitude": 44.4616,
+      "longitude": 34.1059
+    },
+    "driverName": "Сергей",
+    "driverSurname": "Волков",
+    "driverPhoneNumber": "79788092678"
+  },
+  {
+    "id": 7,
+    "category": "Грузовой",
+    "licensePlateNumber": "K123AB777",
+    "geoLocation": {
+      "latitude": 45.0353,
+      "longitude": 35.3778
+    },
+    "driverName": "Владимир",
+    "driverSurname": "Тихонов",
+    "driverPhoneNumber": "79788092679"
+  },
+  {
+    "id": 8,
+    "category": "Пассажирский",
+    "licensePlateNumber": "M789KO123",
+    "geoLocation": {
+      "latitude": 45.0453,
+      "longitude": 35.3878
+    },
+    "driverName": "Игорь",
+    "driverSurname": "Морозов",
+    "driverPhoneNumber": "79788092680"
+  },
+  {
+    "id": 9,
+    "category": "Спецтранспорт",
+    "licensePlateNumber": "E123KX82",
+    "geoLocation": {
+      "latitude": 45.0653,
+      "longitude": 35.3178
+    },
+    "driverName": "Александр",
+    "driverSurname": "Никитин",
+    "driverPhoneNumber": "79788092681"
+  },
+  {
+    "id": 10,
+    "category": "Грузовой",
+    "licensePlateNumber": "B777KM123",
+    "geoLocation": {
+      "latitude": 44.8100,
+      "longitude": 34.1328
+    },
+    "driverName": "Павел",
+    "driverSurname": "Захаров",
+    "driverPhoneNumber": "79788092682"
+  },
+  {
+    "id": 11,
+    "category": "Пассажирский",
+    "licensePlateNumber": "M123CT777",
+    "geoLocation": {
+      "latitude": 44.6100,
+      "longitude": 34.2328
+    },
+    "driverName": "Егор",
+    "driverSurname": "Белов",
+    "driverPhoneNumber": "79788092683"
+  },
+  {
+    "id": 12,
+    "category": "Спецтранспорт",
+    "licensePlateNumber": "K987KM123",
+    "geoLocation": {
+      "latitude": 45.0368,
+      "longitude": 35.3771
+    },
+    "driverName": "Михаил",
+    "driverSurname": "Комаров",
+    "driverPhoneNumber": "79788092684"
+  },
+  {
+    "id": 13,
+    "category": "Грузовой",
+    "licensePlateNumber": "M654PO82",
+    "geoLocation": {
+      "latitude": 45.0368,
+      "longitude": 35.3771
+    },
+    "driverName": "Артем",
+    "driverSurname": "Федотов",
+    "driverPhoneNumber": "79788092685"
+  }
+]
+  
