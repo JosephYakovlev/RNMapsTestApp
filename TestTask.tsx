@@ -8,7 +8,7 @@ type ThrottleProps = {
   delay: number;
 };
 
-// хук useThrottle который принмает в себя массив функций которые нужно вызвать и задержку
+// хук useThrottle который принимает в себя массив функций, которые нужно вызвать и задержку
 const useThrottle = ({ callbacks, delay }: ThrottleProps) => {
   const [lastCallTime, setLastCallTime] = useState(0);
 
@@ -83,10 +83,13 @@ const NextUserButton: React.FC<ButtonProps> = ({handleNextUser}) => {
 export default function TestTask() {
 
 
-  const [users, setUsers] = useState<User[]>(); // для кеша я бы использовал TanStack Query или ReduxToolKit, костыли лепить не особо хочется
+  // для кеша я бы использовал TanStack Query или ReduxToolKit, костыли лепить не особо хочется
+  const [users, setUsers] = useState<User[]>(); 
   const [counter, setCounter] = useState(0);
   const [lastPressTime, setLastPressTime] = useState(0);
 
+
+  // Функция для кнопки 
   const handleNextUser = () => {
     if (users && counter >= users.length - 1) {
       setUsers(undefined);
@@ -97,27 +100,12 @@ export default function TestTask() {
     }
   }
 
-  //
-
   const handlePress = useThrottle({
     callbacks: [handleNextUser],
     delay: 1500,
   });
   
-  
-  
-  
-  
-  useCallback(() => {
-    const currentTime = Date.now();
-    const interval = 1500;
-
-    if (currentTime - lastPressTime >= interval) {
-      handleNextUser();
-      setLastPressTime(currentTime);
-    }
-  }, [lastPressTime]);
-
+  // загружаем пользователей при первом рендере
   useEffect(() => {
     fetchRandomUsersWithPromisses();
   }, []);
@@ -151,8 +139,6 @@ export default function TestTask() {
     const {data, isLoading, refetch } = useGetUsers()
   
 
-
-
  
 // в случае если можно отправить в body список id
 
@@ -184,8 +170,6 @@ const fetchRandomUsersWithBody = useCallback(async () => {
 
 const fetchRandomUsersWithPromisses = useCallback(() => {
 
-  console.log('starting')
-
   const randomIds = Array.from({ length: 10 }, () => Math.floor(Math.random() * (10 - 1)) + 1);
 
   const fetchPromises = randomIds.map(async id => {
@@ -207,13 +191,13 @@ const fetchRandomUsersWithPromisses = useCallback(() => {
       .filter(result => result.status === 'fulfilled' && result.value !== undefined) 
       .map(result => (result as UserPromiseResult).value); 
 
-      console.log(users)
       setUsers(users)
     });
   
   },[])
 
 
+  // Placeholder на время загрузки пользователей
 
   if(!users){
     return (
