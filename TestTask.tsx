@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
-import { useState, useEffect, useCallback } from 'react';
+import { FC, useState, useEffect, useCallback } from 'react';
 import { StyleSheet, Text, View,  ActivityIndicator,  TouchableOpacity } from 'react-native';
 
 type ThrottleProps = {
@@ -59,7 +59,7 @@ type ButtonProps = {
   handleNextUser: () => void;
 }
 
-const UserCard: React.FC<userContainerProps> = ({user}) => {
+const UserCard: FC<userContainerProps> = ({user}) => {
   return (
     <View style={styles.card}>
       <Text style={styles.text}>Name: {user.name}</Text>
@@ -71,7 +71,7 @@ const UserCard: React.FC<userContainerProps> = ({user}) => {
 }
 
 
-const NextUserButton: React.FC<ButtonProps> = ({handleNextUser}) => {
+const NextUserButton: FC<ButtonProps> = ({handleNextUser}) => {
   return (
     <TouchableOpacity style={styles.button} onPress={handleNextUser}>
       <Text style={styles.buttonText}>Next user</Text>
