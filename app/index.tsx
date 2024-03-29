@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { StyleSheet, Text, View, FlatList, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ActivityIndicator, useCallback } from 'react-native';
 import MapView from 'react-native-maps';
 import useGetPosts from '@/api/useGetPosts';
 import VehicleComponent from '@/components/VehicleComponent';
@@ -55,6 +55,13 @@ export default function HomePage() {
       </View>
     )
   }
+
+
+  const renderingVehicleComponent = useCallback(({ item }: { item: IVehicle }) => (
+      <VehicleComponent vehicle={item} />
+  ), []);
+
+  
   
   return (
     <View style={styles.container}>
@@ -75,7 +82,7 @@ export default function HomePage() {
             onRefresh={refetch}
             refreshing={isLoading}
             contentContainerStyle={{ gap: 5, padding: 5, paddingBottom: 40 }}
-            renderItem={({ item }) => <VehicleComponent vehicle={item} />}
+            renderItem={renderingVehicleComponent}
             ListFooterComponent={()=> <FlatListFooterContainer goToFlatlistTop={goToFlatlistTop}/>}
             onScrollToIndexFailed={(e) => alert(`Ошибка возврата, index: ${e.index}`)}
           />
